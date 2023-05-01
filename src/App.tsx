@@ -15,8 +15,8 @@ function App() {
       <Box m={1}>
         <Container maxWidth="md">
           <Button onClick={() => createQa()}>新しい設問を追加</Button>
-          {ids.map((id) => (
-            <QAField id={id} key={id} />
+          {ids.map((id, idx) => (
+            <QAField id={id} num={idx + 1} key={id} />
           ))}
         </Container>
       </Box>
